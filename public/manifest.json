@@ -1,0 +1,14 @@
+{
+  "name": "Test Extension",
+  "description": "Chrome Extension for making it snow in your browser!",
+  "manifest_version": 3,
+  "version": "1.0.0",
+  "icons": {
+    "16": "logo192.png",
+    "48": "logo192.png",
+    "128": "logo192.png"
+  },
+  "action": {
+    "default_popup": "index.html"
+  }
+}
