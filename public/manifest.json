@@ -10,5 +10,20 @@
   },
   "action": {
     "default_popup": "index.html"
-  }
+  },
+  "background": {
+    "service_worker": "background.min.js",
+    "type": "module"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.acmicpc.net/problem/*",
+        "https://www.acmicpc.net/status*",
+        "https://www.acmicpc.net/submit/*",
+        "https://www.acmicpc.net/short/*"
+      ],
+      "js": ["content.min.js"]
+    }
+  ]
 }
