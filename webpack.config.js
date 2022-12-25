@@ -7,9 +7,13 @@ const webpackMode = process.env.NODE_ENV || "development";
 
 module.exports = {
   mode: webpackMode,
-  entry: "./src/index.tsx",
+  entry: {
+    popup: "./src/index.tsx",
+    content: "./src/content.ts",
+    background: "./src/background.ts",
+  },
   resolve: {
-    extensions: [".tsx", ".ts", ".js"],
+    extensions: [".tsx", ".ts", ".js", ".json"],
   },
   output: {
     path: path.join(__dirname, "dist"),
@@ -21,10 +25,21 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.(ts|js)x$/,
+        // test: /\.(ts|js)x$/,
+        test: /\.(ts|js|tsx|jsx)$/,
+        // test: /\.(t|j)sx$/,
+
         exclude: /node_modules/,
+        // use: ["babel-loader", "ts-loader"],
         use: {
           loader: "babel-loader",
+          options: {
+            presets: [
+              "@babel/preset-env",
+              "@babel/preset-react",
+              "@babel/preset-typescript",
+            ],
+          },
         },
       },
       {
