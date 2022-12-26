@@ -10,6 +10,7 @@ module.exports = {
   entry: {
     popup: "./src/index.tsx",
     content: "./src/content.ts",
+    content2: "./src/content2.ts",
     background: "./src/background.ts",
   },
   resolve: {

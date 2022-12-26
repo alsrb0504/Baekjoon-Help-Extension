@@ -24,6 +24,10 @@
         "https://www.acmicpc.net/short/*"
       ],
       "js": ["content.min.js"]
+    },
+    {
+      "matches": ["https://www.acmicpc.net/board/search/all/problem/*"],
+      "js": ["content2.min.js"]
     }
   ]
 }
