@@ -9,8 +9,8 @@ module.exports = {
   mode: webpackMode,
   entry: {
     popup: "./src/index.tsx",
-    content: "./src/content.ts",
-    content2: "./src/content2.ts",
+    content: "./src/contents/content.ts",
+    board: "./src/contents/board.ts",
     background: "./src/background.ts",
   },
   resolve: {
@@ -26,12 +26,8 @@ module.exports = {
   module: {
     rules: [
       {
-        // test: /\.(ts|js)x$/,
-        test: /\.(ts|js|tsx|jsx)$/,
-        // test: /\.(t|j)sx$/,
-
+        test: /\.(ts|js)x?$/,
         exclude: /node_modules/,
-        // use: ["babel-loader", "ts-loader"],
         use: {
           loader: "babel-loader",
           options: {
