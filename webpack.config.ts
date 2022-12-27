@@ -43,10 +43,12 @@ module.exports = {
         test: /\.css$/,
         use: ["style-loader", "css-loader"],
       },
+      // Images
       {
         test: /\.(?:ico|gif|png|jpg|jpeg)$/i,
         type: "asset/resource",
       },
+      // Fonts and SVGs
       {
         test: /\.(woff(2)?|eot|ttf|otf|svg|)$/,
         type: "asset/inline",
@@ -68,12 +70,13 @@ module.exports = {
       patterns: [
         { from: "public/manifest.json", to: "" },
         { from: "public/logo.png", to: "" },
+        // { from: "public/git.svg", to: "" },
       ],
     }),
   ],
-  devServer: {
-    hot: true,
-    host: "localhost",
-    port: 3001,
-  },
+  // devServer: {
+  //   hot: true,
+  //   host: "localhost",
+  //   port: 3001,
+  // },
 };
