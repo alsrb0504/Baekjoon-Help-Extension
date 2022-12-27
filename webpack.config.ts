@@ -70,7 +70,6 @@ module.exports = {
       patterns: [
         { from: "public/manifest.json", to: "" },
         { from: "public/logo.png", to: "" },
-        // { from: "public/git.svg", to: "" },
       ],
     }),
   ],

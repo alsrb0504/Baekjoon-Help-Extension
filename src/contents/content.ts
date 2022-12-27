@@ -3,6 +3,8 @@ const problem_menus = document.querySelector(
   ".problem-menu"
 ) as HTMLUListElement;
 
+// FIXME: firstElementChild is null... 아마 problem_menus를 못 찾는 문제?
+
 // 메뉴바의 첫 번째 자식이 문제번호를 가지고 있음.
 const first_menu = problem_menus.firstElementChild as HTMLLIElement;
 // 1000번 -> 1000 추출.
@@ -16,7 +18,7 @@ const OpenHelp = () => {
     `https://www.acmicpc.net/board/search/all/problem/${problem_number}`
   );
   window.open(
-    `https://www.google.com/search?q=%EB%B0%B1%EC%A4%80+${problem_number}&oq=%EB%B0%B1%EC%A4%80+${problem_number}&aqs=chrome..69i57j0i512l9.8574j0j7&sourceid=chrome&ie=UTF-8`
+    `https://www.google.com/search?q=%EB%B0%B1%EC%A4%80+${problem_number}&oq=%EB%B0%B1%EC%A4%80+${problem_number}&aqs=chrome.0.69i59j0i512l9.3745j0j7&sourceid=chrome&ie=UTF-8`
   );
 };
 
