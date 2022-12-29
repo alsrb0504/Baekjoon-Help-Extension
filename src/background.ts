@@ -1,13 +1,5 @@
-console.log("Test background");
+// chrome.storage.local.get("default_lang", (data) => {
+//   console.log(`get ${data}`);
 
-const N: number = 2;
-console.log(N);
-
-// chrome.action.onClicked.addListener((tab) => {
-//   chrome.scripting.executeScript({
-//     target: { tabId: tab.id },
-//     files: ["content.js"],
-//   });
+//   console.log(JSON.stringify(data));
 // });
-
-// chrome

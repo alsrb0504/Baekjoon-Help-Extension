@@ -29,5 +29,6 @@
       "matches": ["https://www.acmicpc.net/board/search/all/problem/*"],
       "js": ["board.min.js"]
     }
-  ]
+  ],
+  "permissions": ["storage"]
 }

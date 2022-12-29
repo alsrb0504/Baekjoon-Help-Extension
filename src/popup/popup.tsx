@@ -1,9 +1,46 @@
-import React from "react";
+import React, {
+  ChangeEvent,
+  FormEvent,
+  useCallback,
+  useEffect,
+  useState,
+} from "react";
 import "./popup.css";
 import logo from "../assets/logo.png";
 import git_icon from "../assets/git.svg";
 
 const Popup = () => {
+  const [lang, setLang] = useState("");
+
+  useEffect(() => {
+    chrome.storage.local.get("lang", (data) => {
+      setLang(data.lang);
+    });
+  }, []);
+
+  const OnChange = (e: ChangeEvent) => {
+    const target = e.target as HTMLInputElement;
+    setLang(target.value);
+  };
+
+  const OnSubmit = useCallback(
+    (e: FormEvent) => {
+      e.preventDefault();
+
+      chrome.storage.local.set({ lang }, () => {
+        if (chrome.runtime.lastError) {
+          console.log("Error");
+        }
+
+        chrome.storage.local.get("lang", (data) => {
+          const default_lang = data.lang;
+          setLang(default_lang);
+        });
+      });
+    },
+    [lang]
+  );
+
   return (
     <div className="popup">
       <header className="popup-header header">
@@ -17,7 +54,7 @@ const Popup = () => {
         </a>
       </header>
 
-      <form className="popup-form">
+      <form className="popup-form" onSubmit={OnSubmit}>
         <label className="form-label" htmlFor="lang">
           Used Language
         </label>
@@ -26,6 +63,8 @@ const Popup = () => {
           type="text"
           id="lang"
           placeholder="사용언어"
+          onChange={OnChange}
+          value={lang}
         />
         <button className="form-submit" type="submit">
           설정

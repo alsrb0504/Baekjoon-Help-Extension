@@ -14,12 +14,24 @@ const problem_number: string = first_menu
   .trim();
 
 const OpenHelp = () => {
-  window.open(
-    `https://www.acmicpc.net/board/search/all/problem/${problem_number}`
-  );
-  window.open(
-    `https://www.google.com/search?q=%EB%B0%B1%EC%A4%80+${problem_number}&oq=%EB%B0%B1%EC%A4%80+${problem_number}&aqs=chrome.0.69i59j0i512l9.3745j0j7&sourceid=chrome&ie=UTF-8`
-  );
+  let default_lang = "";
+
+  // 비동기적으로 가져옴.
+  chrome.storage.local.get("lang", (data) => {
+    // 설정한 언어가 있다면 공백 + default_lang
+    default_lang = data.lang;
+    const search_param = `${problem_number}${
+      default_lang ? ` ` + default_lang : ""
+    }`;
+
+    window.open(
+      `https://www.acmicpc.net/board/search/all/problem/${problem_number}`
+    );
+
+    window.open(
+      `https://www.google.com/search?q=%EB%B0%B1%EC%A4%80+${search_param}&oq=%EB%B0%B1%EC%A4%80+${search_param}&aqs=chrome.0.69i59j0i512l9.3745j0j7&sourceid=chrome&ie=UTF-8`
+    );
+  });
 };
 
 // 도움 받기 엘리먼트 생성 및 기능 추가.
