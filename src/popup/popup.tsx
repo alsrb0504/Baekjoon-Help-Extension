@@ -6,8 +6,8 @@ import React, {
   useState,
 } from "react";
 import "./popup.css";
-import logo from "../assets/logo.png";
-import git_icon from "../assets/git.svg";
+import logo from "../assets/imgs/logo.png";
+import git_icon from "../assets/imgs/git.svg";
 
 const Popup = () => {
   const [lang, setLang] = useState("");
