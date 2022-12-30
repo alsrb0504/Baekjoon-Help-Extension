@@ -13,8 +13,9 @@ const Popup = () => {
   const [lang, setLang] = useState("");
 
   useEffect(() => {
-    chrome.storage.local.get("lang", (data) => {
-      setLang(data.lang);
+    chrome.runtime.sendMessage({ action: "GET_SETTING" }, (res) => {
+      console.log(`res = ${JSON.stringify(res)}`);
+      setLang(res.lang);
     });
   }, []);
 
@@ -27,16 +28,15 @@ const Popup = () => {
     (e: FormEvent) => {
       e.preventDefault();
 
-      chrome.storage.local.set({ lang }, () => {
-        if (chrome.runtime.lastError) {
-          console.log("Error");
+      chrome.runtime.sendMessage(
+        {
+          action: "SET_SETTING",
+          data: lang,
+        },
+        () => {
+          setLang(lang);
         }
-
-        chrome.storage.local.get("lang", (data) => {
-          const default_lang = data.lang;
-          setLang(default_lang);
-        });
-      });
+      );
     },
     [lang]
   );

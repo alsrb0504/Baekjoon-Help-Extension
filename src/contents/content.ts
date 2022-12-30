@@ -16,10 +16,10 @@ const problem_number: string = first_menu
 const OpenHelp = () => {
   let default_lang = "";
 
-  // 비동기적으로 가져옴.
-  chrome.storage.local.get("lang", (data) => {
-    // 설정한 언어가 있다면 공백 + default_lang
-    default_lang = data.lang;
+  chrome.runtime.sendMessage({ action: "GET_SETTING" }, (res) => {
+    console.log(`res = ${JSON.stringify(res)}`);
+    default_lang = res.lang;
+
     const search_param = `${problem_number}${
       default_lang ? ` ` + default_lang : ""
     }`;
