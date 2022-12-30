@@ -14,7 +14,6 @@ const Popup = () => {
 
   useEffect(() => {
     chrome.runtime.sendMessage({ action: "GET_SETTING" }, (res) => {
-      console.log(`res = ${JSON.stringify(res)}`);
       setLang(res.lang);
     });
   }, []);

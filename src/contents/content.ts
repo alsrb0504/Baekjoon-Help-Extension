@@ -3,8 +3,6 @@ const problem_menus = document.querySelector(
   ".problem-menu"
 ) as HTMLUListElement;
 
-// FIXME: firstElementChild is null... 아마 problem_menus를 못 찾는 문제?
-
 // 메뉴바의 첫 번째 자식이 문제번호를 가지고 있음.
 const first_menu = problem_menus.firstElementChild as HTMLLIElement;
 // 1000번 -> 1000 추출.
@@ -13,11 +11,13 @@ const problem_number: string = first_menu
   .innerText.split("번")[0]
   .trim();
 
+// *
+// 도움 받기 기능 구현 함수.
+// *
 const OpenHelp = () => {
   let default_lang = "";
 
   chrome.runtime.sendMessage({ action: "GET_SETTING" }, (res) => {
-    console.log(`res = ${JSON.stringify(res)}`);
     default_lang = res.lang;
 
     const search_param = `${problem_number}${
