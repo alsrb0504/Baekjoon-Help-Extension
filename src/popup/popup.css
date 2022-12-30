@@ -6,7 +6,7 @@
   border: none;
   outline: none;
 
-  font-family: "Noto Sans KR";
+  font-family: url("../assets/font/NotoSansKR-Regular.otf");
   letter-spacing: 0.03rem;
 }
 
