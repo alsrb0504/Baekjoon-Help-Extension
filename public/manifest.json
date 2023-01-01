@@ -23,7 +23,7 @@
         "https://www.acmicpc.net/submit/*",
         "https://www.acmicpc.net/short/*"
       ],
-      "js": ["content.min.js"]
+      "js": ["problem.min.js"]
     },
     {
       "matches": ["https://www.acmicpc.net/board/search/all/problem/*"],

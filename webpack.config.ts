@@ -9,8 +9,8 @@ module.exports = {
   mode: webpackMode,
   entry: {
     popup: "./src/index.tsx",
-    content: "./src/contents/content.ts",
-    board: "./src/contents/board.ts",
+    problem: "./src/contents/problem/problem.ts",
+    board: "./src/contents/board/board.ts",
     background: "./src/background.ts",
   },
   resolve: {
