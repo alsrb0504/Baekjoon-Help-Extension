@@ -6,6 +6,7 @@
   border: none;
   outline: none;
 
+  /* TODO: otf 파일 import 고쳐야 함. */
   font-family: url("../assets/font/NotoSansKR-Regular.otf");
   letter-spacing: 0.03rem;
 }
@@ -17,76 +18,4 @@
   align-items: center;
   min-width: 300px;
   min-height: 200px;
-}
-
-/* popup header part */
-.popup-header {
-  display: flex;
-  align-items: center;
-  height: 32px;
-  margin-bottom: 16px;
-}
-
-.popup-header .header-icon {
-  height: 90%;
-  margin-top: 4px;
-  margin-right: 4px;
-}
-
-.popup-header .header-title {
-  margin-right: 4px;
-  font-size: 24px;
-  color: #5f5f61;
-}
-
-.popup-header .header-git {
-  display: flex;
-  align-items: center;
-  height: 100%;
-}
-
-.popup-header .header-git img {
-  height: 80%;
-}
-
-/* popup form part*/
-.popup-form {
-  display: flex;
-  flex-direction: column;
-}
-
-.popup-form .form-label {
-  font-size: 12px;
-  margin-bottom: 4px;
-}
-
-.popup-form .form-input {
-  padding: 8px;
-  margin-bottom: 8px;
-  border: 2px solid #d1d1d5;
-  border-radius: 4px;
-
-  font-size: 16px;
-}
-
-.popup-form .form-input:focus {
-  border-color: #ffb300;
-}
-
-.popup-form .form-submit {
-  width: 100%;
-  height: 38px;
-  border-radius: 6px;
-  background-color: #ffb300;
-
-  font-size: 18px;
-  font-weight: 600;
-  color: white;
-
-  transition: opacity 100ms ease-in;
-}
-
-.popup-form .form-submit:hover,
-.popup-form .form-submit:active {
-  opacity: 0.6;
 }

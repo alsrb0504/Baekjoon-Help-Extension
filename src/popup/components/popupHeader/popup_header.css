@@ -1,0 +1,29 @@
+/* popup header part */
+.popup-header {
+  display: flex;
+  align-items: center;
+  height: 32px;
+  margin-bottom: 16px;
+}
+
+.popup-header .header-icon {
+  height: 90%;
+  margin-top: 4px;
+  margin-right: 4px;
+}
+
+.popup-header .header-title {
+  margin-right: 4px;
+  font-size: 24px;
+  color: #5f5f61;
+}
+
+.popup-header .header-git {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.popup-header .header-git img {
+  height: 80%;
+}
