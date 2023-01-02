@@ -1,41 +1,28 @@
-import React, {
-  ChangeEvent,
-  FormEvent,
-  useCallback,
-  useEffect,
-  useState,
-} from "react";
+import React, { ChangeEvent, FormEvent, useCallback, useEffect } from "react";
 import "./popup_form.css";
+import useSetting from "../../hoc/useSetting";
 
 const PopupForm = () => {
-  const [lang, setLang] = useState("");
+  const { lang, setLang, GetSettings, SetSettings } = useSetting();
 
   useEffect(() => {
-    chrome.runtime.sendMessage({ action: "GET_SETTING" }, (res) => {
-      setLang(res.lang);
-    });
-  }, []);
+    GetSettings();
+  }, [GetSettings]);
 
-  const OnChange = (e: ChangeEvent) => {
-    const target = e.target as HTMLInputElement;
-    setLang(target.value);
-  };
+  const OnChange = useCallback(
+    (e: ChangeEvent) => {
+      const target = e.target as HTMLInputElement;
+      setLang(target.value);
+    },
+    [setLang]
+  );
 
   const OnSubmit = useCallback(
     (e: FormEvent) => {
       e.preventDefault();
-
-      chrome.runtime.sendMessage(
-        {
-          action: "SET_SETTING",
-          data: lang,
-        },
-        () => {
-          setLang(lang);
-        }
-      );
+      SetSettings(lang);
     },
-    [lang]
+    [lang, setLang, SetSettings]
   );
 
   return (
