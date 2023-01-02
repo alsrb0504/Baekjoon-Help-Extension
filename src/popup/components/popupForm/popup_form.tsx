@@ -3,6 +3,7 @@ import React, {
   FormEvent,
   useCallback,
   useEffect,
+  useRef,
   useState,
 } from "react";
 import "./popup_form.css";
@@ -11,9 +12,11 @@ import useSetting from "../../hoc/useSetting";
 const PopupForm = () => {
   const { lang, setLang, GetSettings, SetSettings } = useSetting();
   const [loading, setLoading] = useState(false);
+  const inputRef = useRef<HTMLInputElement>(null);
 
   useEffect(() => {
     GetSettings();
+    inputRef.current?.focus();
   }, [GetSettings]);
 
   const OnChange = useCallback(
@@ -33,7 +36,7 @@ const PopupForm = () => {
 
       setTimeout(() => {
         setLoading(false);
-      }, 1000);
+      }, 500);
     },
     [lang, setLang, SetSettings]
   );
@@ -44,6 +47,7 @@ const PopupForm = () => {
         Used Language
       </label>
       <input
+        ref={inputRef}
         className="form-input"
         type="text"
         id="lang"
