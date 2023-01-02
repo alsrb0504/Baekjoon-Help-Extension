@@ -22,20 +22,27 @@
   border-color: #ffb300;
 }
 
-.popup-form .form-submit {
+/* popup button */
+.popup-form .form-btn {
   width: 100%;
   height: 38px;
   border-radius: 6px;
-  background-color: #ffb300;
 
   font-size: 18px;
   font-weight: 600;
   color: white;
+}
 
+.popup-form .form-submit {
+  background-color: #ffb300;
   transition: opacity 100ms ease-in;
 }
 
 .popup-form .form-submit:hover,
 .popup-form .form-submit:active {
   opacity: 0.6;
+}
+
+.popup-form .form-loading {
+  background-color: #faab78;
 }

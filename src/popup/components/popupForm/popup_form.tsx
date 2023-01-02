@@ -1,9 +1,16 @@
-import React, { ChangeEvent, FormEvent, useCallback, useEffect } from "react";
+import React, {
+  ChangeEvent,
+  FormEvent,
+  useCallback,
+  useEffect,
+  useState,
+} from "react";
 import "./popup_form.css";
 import useSetting from "../../hoc/useSetting";
 
 const PopupForm = () => {
   const { lang, setLang, GetSettings, SetSettings } = useSetting();
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     GetSettings();
@@ -21,6 +28,12 @@ const PopupForm = () => {
     (e: FormEvent) => {
       e.preventDefault();
       SetSettings(lang);
+
+      setLoading(true);
+
+      setTimeout(() => {
+        setLoading(false);
+      }, 1000);
     },
     [lang, setLang, SetSettings]
   );
@@ -38,9 +51,17 @@ const PopupForm = () => {
         onChange={OnChange}
         value={lang}
       />
-      <button className="form-submit" type="submit">
-        설정
-      </button>
+      {/* 버튼 로딩 */}
+      {!loading && (
+        <button className="form-btn form-submit" type="submit">
+          설정
+        </button>
+      )}
+      {loading && (
+        <button disabled className="form-btn form-loading">
+          loading...
+        </button>
+      )}
     </form>
   );
 };
