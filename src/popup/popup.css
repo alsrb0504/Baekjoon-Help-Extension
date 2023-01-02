@@ -1,4 +1,9 @@
 /* CSS reset + font setting */
+@font-face {
+  font-family: "NotoSansKR";
+  src: url("../assets/font/NotoSansKR-Regular.ttf") format("truetype");
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -6,8 +11,7 @@
   border: none;
   outline: none;
 
-  /* TODO: otf 파일 import 고쳐야 함. */
-  font-family: url("../assets/font/NotoSansKR-Regular.otf");
+  font-family: "NotoSansKR";
   letter-spacing: 0.03rem;
 }
 

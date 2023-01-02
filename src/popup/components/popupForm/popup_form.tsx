@@ -36,7 +36,8 @@ const PopupForm = () => {
 
       setTimeout(() => {
         setLoading(false);
-      }, 500);
+        // window.close();  // 팝업 자동 종료 (고려)
+      }, 300);
     },
     [lang, setLang, SetSettings]
   );
