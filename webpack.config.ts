@@ -11,7 +11,7 @@ module.exports = {
     popup: "./src/index.tsx",
     problem: "./src/contents/problem/problem.ts",
     board: "./src/contents/board/board.ts",
-    background: "./src/background.ts",
+    background: "./src/background/background.ts",
   },
   resolve: {
     extensions: [".tsx", ".ts", ".js", ".json"],
