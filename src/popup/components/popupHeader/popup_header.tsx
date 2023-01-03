@@ -10,6 +10,7 @@ const PopupHeader = () => {
       <h1 className="header-title">백준 헬프</h1>
       <a
         className="header-git"
+        target="_blank"
         href="https://github.com/alsrb0504/Backjoon-Help-Extension"
       >
         <img src={git_icon} alt="git_icon" />
