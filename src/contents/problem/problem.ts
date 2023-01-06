@@ -25,10 +25,6 @@ const OpenHelp = () => {
     }`;
 
     window.open(
-      `https://www.acmicpc.net/board/search/all/problem/${problem_number}`
-    );
-
-    window.open(
       `https://www.google.com/search?q=%EB%B0%B1%EC%A4%80+${search_param}&oq=%EB%B0%B1%EC%A4%80+${search_param}&aqs=chrome.0.69i59j0i512l9.3745j0j7&sourceid=chrome&ie=UTF-8`
     );
   });

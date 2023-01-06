@@ -2,7 +2,7 @@
   "name": "백준 헬프 (Baekjoon Help)",
   "description": "백준 풀이 검색을 위한 크롬 확장 프로그램",
   "manifest_version": 3,
-  "version": "1.0.0",
+  "version": "1.0.1",
   "icons": {
     "16": "logo.png",
     "48": "logo.png",
