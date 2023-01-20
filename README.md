@@ -4,7 +4,7 @@
 
 ## 사용 방법
 
-[크롬 웹 스토어 : 백준 헬프](https://chrome.google.com/webstore/detail/%EB%B0%B1%EC%A4%80-%ED%97%AC%ED%94%84-baekjoon-help/pdemnkinpcpgaoifngpojlfdmngbpaha?hl=ko) ("https://chrome.google.com/webstore/detail/%EB%B0%B1%EC%A4%80-%ED%97%AC%ED%94%84-baekjoon-help/pdemnkinpcpgaoifngpojlfdmngbpaha?hl=ko")
+[크롬 웹 스토어 : 백준 헬프](https://chrome.google.com/webstore/detail/%EB%B0%B1%EC%A4%80-%ED%97%AC%ED%94%84-baekjoon-help/pdemnkinpcpgaoifngpojlfdmngbpaha?hl=ko)
 
 ## 개발 동기
 
