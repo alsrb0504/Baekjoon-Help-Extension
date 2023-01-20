@@ -15,54 +15,36 @@
 
 ## 기능
 
-##### 1. 도움 받기 버튼으로 빠른 검색 기능.
+##### 1. 도움 받기 버튼으로 빠른 검색 기능
 
-##### 2. 질문 게시판 유용한 글 강조.
+##### 2. 질문 게시판 유용한 글 강조
 
-##### 3. 검색 시, 디폴트 언어 설정 기능.
+##### 3. 검색 시, 디폴트 언어 설정 기능
 
----
 
-### 1. 백준 문제 메뉴에 도움받기 버튼 추가.
 
-- 기존 문제 메뉴바에 `도움받기` 버튼을 추가.
-- `도움 받기` 버튼 클릭 시, 구글에 문제 번호로 풀이 검색 + 질문 게시판 이동.
+## 1. 백준 문제 메뉴에 도움받기 버튼 추가
 
-### before
+- 기존 문제 메뉴바에 `도움받기` 버튼을 추가
+- `도움 받기` 버튼 클릭 시, 구글에 문제 번호로 풀이 검색
 
-![image](https://user-images.githubusercontent.com/65377787/209573123-8d916dc6-bd9e-4bf9-9d0f-bdc6ffd6cb47.png)
+![도움 받기 사진](https://user-images.githubusercontent.com/65377787/213765078-4439ca08-cc59-4deb-b0a0-67deb2eb5f0e.png)
 
----
 
-### after
 
-![image](https://user-images.githubusercontent.com/65377787/209571618-fbebcdb8-fd86-4f35-a97b-b5bda5578726.png)
 
-- 버튼 클릭 시, 구글에 문제 번호로 검색.
-  ![image](https://user-images.githubusercontent.com/65377787/209573335-62e16e84-793a-47cb-af2a-dd3deb5247a2.png)
-
----
-
-### 2. 질문 게시판 유용한 글 강조 기능.
+## 2. 질문 게시판 유용한 글 강조 기능
 
 - 기존 질문 게시판의 글들은 어떤 글이 답변이 있는 글인지, 답변이 없는 채로 질문만 있는 글인지 구분이 되지 않음.
 - 빠르게 유용한 글 만을 확인할 수 있도록 답변이 있는 글은 ![##eafdfc](https://placehold.co/15x15/eafdfc/eafdfc.png), 좋아요가 있는 글은 ![#fff6bd](https://placehold.co/15x15/fff6bd/fff6bd.png) 으로 강조.
+![보드 사진](https://user-images.githubusercontent.com/65377787/213765400-f8c993ef-76d1-42e8-ae0b-4db253175129.png)
 
-### before
 
-![image](https://user-images.githubusercontent.com/65377787/209572164-a395973a-2c5b-477c-bc07-133006018a6c.png)
 
----
 
-### after
+## 3. 팝업 페이지 디폴트 언어 설정
 
-![image](https://user-images.githubusercontent.com/65377787/209572136-609db257-82fb-4f6d-b83c-4c5ccefc7d1d.png)
-
----
-
-### 3. 팝업 페이지 디폴트 언어 설정.
-
-- 문제 번호 검색 시, 본인이 사용하는 언어로 검색하도록 언어 설정 가능.
+- 문제 번호 검색 시, 본인이 사용하는 언어로 검색하도록 언어 설정 가능
 
 ![image](https://user-images.githubusercontent.com/65377787/210343385-2c17fad9-2114-43f4-9e7b-49085ef32ed1.png)
 
@@ -71,6 +53,8 @@
   <br/>
 
 ![image](https://user-images.githubusercontent.com/65377787/210343638-b8b2358d-6d30-48da-8815-ca416413c867.png)
+
+<br/>
 
 ## 버전
 
