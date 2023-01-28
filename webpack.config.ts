@@ -8,7 +8,7 @@ const webpackMode = process.env.NODE_ENV || "development";
 module.exports = {
   mode: webpackMode,
   entry: {
-    popup: "./src/index.tsx",
+    popup: "./src/popup/index.tsx",
     problem: "./src/contents/problem/problem.ts",
     board: "./src/contents/board/board.ts",
     background: "./src/background/background.ts",
