@@ -1,7 +1,11 @@
 /* popup form part*/
 .popup-form {
+  position: relative;
+
   display: flex;
   flex-direction: column;
+
+  width: 160px;
 }
 
 .popup-form .form-label {
@@ -9,17 +13,27 @@
   margin-bottom: 4px;
 }
 
-.popup-form .form-input {
+/* popup form select */
+.popup-form .form-select {
+  width: 100%;
   padding: 8px;
   margin-bottom: 8px;
-  border: 2px solid #d1d1d5;
   border-radius: 4px;
-
   font-size: 16px;
+
+  box-shadow: rgb(60 64 67 / 30%) 0px 1px 2px 0px,
+    rgb(60 64 67 / 15%) 0px 1px 3px 1px;
 }
 
-.popup-form .form-input:focus {
-  border-color: #ffb300;
+.popup-form .form-select option {
+  border-bottom: 1px solid #d1d1d5;
+  border-radius: 8px;
+}
+
+.popup-form .form-select option:checked {
+  color: #fff;
+  font-weight: 600;
+  background-color: #ffd268;
 }
 
 /* popup button */

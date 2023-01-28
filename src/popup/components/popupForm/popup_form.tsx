@@ -3,25 +3,23 @@ import React, {
   FormEvent,
   useCallback,
   useEffect,
-  useRef,
   useState,
 } from "react";
 import "./popup_form.css";
 import useSetting from "../../hoc/useSetting";
 
 const PopupForm = () => {
-  const { lang, setLang, GetSettings, SetSettings } = useSetting();
+  const { lang, lang_options, setLang, GetSettings, SetSettings } =
+    useSetting();
   const [loading, setLoading] = useState(false);
-  const inputRef = useRef<HTMLInputElement>(null);
 
   useEffect(() => {
     GetSettings();
-    inputRef.current?.focus();
   }, [GetSettings]);
 
   const OnChange = useCallback(
     (e: ChangeEvent) => {
-      const target = e.target as HTMLInputElement;
+      const target = e.target as HTMLSelectElement;
       setLang(target.value);
     },
     [setLang]
@@ -47,15 +45,18 @@ const PopupForm = () => {
       <label className="form-label" htmlFor="lang">
         Used Language
       </label>
-      <input
-        ref={inputRef}
-        className="form-input"
-        type="text"
+
+      <select
+        className="form-select"
         id="lang"
-        placeholder="사용언어"
         onChange={OnChange}
         value={lang}
-      />
+      >
+        {lang_options.map((el) => (
+          <option value={el.value}>{el.text}</option>
+        ))}
+      </select>
+
       {/* 버튼 로딩 */}
       {!loading && (
         <button className="form-btn form-submit" type="submit">
