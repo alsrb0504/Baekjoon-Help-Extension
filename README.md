@@ -21,8 +21,6 @@
 
 ##### 3. 검색 시, 디폴트 언어 설정 기능
 
-
-
 ## 1. 백준 문제 메뉴에 도움받기 버튼 추가
 
 - 기존 문제 메뉴바에 `도움받기` 버튼을 추가
@@ -30,29 +28,17 @@
 
 ![도움 받기 사진](https://user-images.githubusercontent.com/65377787/213765078-4439ca08-cc59-4deb-b0a0-67deb2eb5f0e.png)
 
-
-
-
 ## 2. 질문 게시판 유용한 글 강조 기능
 
 - 기존 질문 게시판의 글들은 어떤 글이 답변이 있는 글인지, 답변이 없는 채로 질문만 있는 글인지 구분이 되지 않음.
 - 빠르게 유용한 글 만을 확인할 수 있도록 답변이 있는 글은 ![##eafdfc](https://placehold.co/15x15/eafdfc/eafdfc.png), 좋아요가 있는 글은 ![#fff6bd](https://placehold.co/15x15/fff6bd/fff6bd.png) 으로 강조.
-![보드 사진](https://user-images.githubusercontent.com/65377787/213765400-f8c993ef-76d1-42e8-ae0b-4db253175129.png)
-
-
-
+  ![보드 사진](https://user-images.githubusercontent.com/65377787/213765400-f8c993ef-76d1-42e8-ae0b-4db253175129.png)
 
 ## 3. 팝업 페이지 디폴트 언어 설정
 
-- 문제 번호 검색 시, 본인이 사용하는 언어로 검색하도록 언어 설정 가능
+- 문제 번호 검색 시, 본인이 사용하는 언어로 검색하도록 언어 설정 기능.
 
-![image](https://user-images.githubusercontent.com/65377787/210343385-2c17fad9-2114-43f4-9e7b-49085ef32ed1.png)
-
-- 언어 설정 후, 검색 화면
-- 문제 번호 + 설정 언어로 검색
-  <br/>
-
-![image](https://user-images.githubusercontent.com/65377787/210343638-b8b2358d-6d30-48da-8815-ca416413c867.png)
+![Group 280](https://user-images.githubusercontent.com/65377787/215256926-bebc2e63-00ee-4759-88a7-400d7172bfd9.png)
 
 <br/>
 
@@ -69,6 +55,10 @@
 
 - `도움 받기` 버튼 클릭 시,기존 질문게시판 + 문제번호 검색 2개의 탭을 띄우는 것에서 문제번호 검색 탭만 띄우는 것으로 변경.
 
-## 노션 소개 페이지
-[노션 링크](https://www.notion.so/Baekjoon-Help-0ce3e57ea19e462e85bd61b998abaaca)
+#### 1.0.2
 
+- 팝업 페이지 언어 설정 기능 input -> select 형식으로 변경.
+
+## 노션 소개 페이지
+
+[노션 링크](https://www.notion.so/Baekjoon-Help-0ce3e57ea19e462e85bd61b998abaaca)
