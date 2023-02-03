@@ -3,17 +3,14 @@ const problem_menus = document.querySelector(
   ".problem-menu"
 ) as HTMLUListElement;
 
-// 메뉴바의 첫 번째 자식이 문제번호를 가지고 있음.
+// 메뉴바의 첫 번째 자식으로부터 문제 번호 추출 (1000번 -> 1000 추출).
 const first_menu = problem_menus.firstElementChild as HTMLLIElement;
-// 1000번 -> 1000 추출.
 const problem_number: string = first_menu
   .querySelector("a")!
   .innerText.split("번")[0]
   .trim();
 
-// *
 // 도움 받기 기능 구현 함수.
-// *
 const OpenHelp = () => {
   let default_lang = "";
 

@@ -1,5 +1,5 @@
 // SET : 언어 설정
-chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
+chrome.runtime.onMessage.addListener((request) => {
   if (request.action === "SET_SETTING") {
     const { data } = request;
 
