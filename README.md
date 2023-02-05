@@ -3,8 +3,10 @@
 백준 풀이 검색 및 빠른 반례 찾기를 위한 크롬 확장 프로그램.
 
 ## 사용 방법
+##### 1. [크롬 웹 스토어 : 백준 헬프](https://chrome.google.com/webstore/detail/%EB%B0%B1%EC%A4%80-%ED%97%AC%ED%94%84-baekjoon-help/pdemnkinpcpgaoifngpojlfdmngbpaha?hl=ko)에서 다운로드
 
-[크롬 웹 스토어 : 백준 헬프](https://chrome.google.com/webstore/detail/%EB%B0%B1%EC%A4%80-%ED%97%AC%ED%94%84-baekjoon-help/pdemnkinpcpgaoifngpojlfdmngbpaha?hl=ko)
+##### 2. 백준 문제 페이지 및 질문 게시판 접속 시, 자동 실행
+
 
 ## 개발 동기
 
