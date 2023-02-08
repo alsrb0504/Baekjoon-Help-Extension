@@ -61,6 +61,3 @@
 
 - 팝업 페이지 언어 설정 기능 input -> select 형식으로 변경.
 
-## 노션 소개 페이지
-
-[노션 링크](https://www.notion.so/Baekjoon-Help-0ce3e57ea19e462e85bd61b998abaaca)
